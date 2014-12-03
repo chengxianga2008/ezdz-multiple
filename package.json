@@ -1,0 +1,33 @@
+{
+    "name": "ezdz",
+    "version": "0.4.2",
+    "title": "Ezdz multiple",
+    "description": "jQuery File Input plugin ezdz with multiple files support and grid preview.",
+    "homepage": "https://github.com/chengxianga2008/ezdz-multiple",
+    "bugs": "https://github.com/chengxianga2008/ezdz-multiple/issues",
+    "download": "https://github.com/chengxianga2008/ezdz-multiple/archive/master.zip",
+    "keywords": [
+        "file",
+        "form",
+        "drag",
+        "drop",
+        "preview",
+        "upload"
+    ],
+    "author": {
+        "name": "Jack Cheng"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:chengxianga2008/ezdz-multiple.git"
+    },
+    "main": "src/jquery.ezdz.js",
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.8"
+    }
+}
