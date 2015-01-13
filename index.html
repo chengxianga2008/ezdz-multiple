@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  
+  <link rel="stylesheet" href="src/jquery.ezdz.css">
+  <script type="text/javascript" src= "node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="src/jquery.ezdz.js"></script>
+  
+</head>
+<body>
+  
+  <div>
+    <input type="file" name="file_upload[]" accept="image/png, image/jpeg" multiple/>  
+  </div>  
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+    	$('input[type="file"]').ezdz({
+    			text: 'drop cover photos',
+	            validators: {
+	                maxWidth:  2000,
+	                maxHeight: 2000,
+	                maxNumber: 6
+	            },
+	            reject: function(file, errors) {
+	                if (errors.mimeType) {
+	                    alert(file.name + ' must be an image.');
+	                    return;
+	                }
+
+	                if (errors.maxWidth) {
+	                    alert(file.name + ' must be width:2000px max.');
+	                    return;
+	                }
+
+	                if (errors.maxHeight) {
+	                    alert(file.name + ' must be height:2000px max.');
+	                    return;
+	                }
+
+	                if (errors.maxNumber) {
+		                alert('you can upload maximum of 6 images');
+		                return;
+	                }
+	            }
+    	});
+    });
+    
+  </script>
+</body>
+</html>
